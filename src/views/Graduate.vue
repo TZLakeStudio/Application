@@ -8,7 +8,7 @@ for (let i = 0; i < 100; i ++) {
 
 <template>
   <div id="news">
-    <p v-for="t in tmp">{{ t }}</p>
+<!--    <p v-for="t in tmp">{{ t }}</p>-->
   </div>
 </template>
 

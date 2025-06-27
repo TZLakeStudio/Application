@@ -12,13 +12,13 @@ const sites = ref<Site[]>(
     { "name": "学院通知", "path": "/news" },
     { "name": "学生组织", "path": "/news" },
     { "name": "学校通知", "path": "/news" },
-    { "name": "学生会通知", "path": "/news" },
-    { "name": "新手手册", "path": "/news" },
-    { "name": "这里要塞一堆tag", "path": "/news" },
+    { "name": "入学指南", "path": "/news" },
+    { "name": "校园生活", "path": "/news" },
+    { "name": "培养方案", "path": "/news" },
   ]
 )
 
-for (let i = 0; i < 1; i++) {
+for (let i = 0; i < 0; i++) {
   sites.value.push({ "name": `测试Tag${ i }`, "path": "/news" });
 }
 
