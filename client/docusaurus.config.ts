@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: '机器人学院学生手册',
-  tagline: 'Dinosaurs are cool',
+  tagline: '一站式的学生信息获取站点',
   favicon: 'img/favicon.jpg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -15,7 +15,7 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://twis.uk',
+  url: 'https://app.twis.uk',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -91,34 +91,24 @@ const config: Config = {
       items: [
         // 左
         {
-          to: '/',
-          label: '主页',
-          position: 'left',
-          activeBasePath: '/',
-        },
-        {
-          to: '/docs/study',
+          to: '/docs/start',
           label: '入学',
           position: 'left',
-          activeBaseRegex: 'docs/study/(next|v8)',
         },
         {
-          to: '/docs/study',
+          to: '/docs/life',
           label: '生活',
           position: 'left',
-          activeBaseRegex: 'docs/study/(next|v8)',
         },
         {
           to: '/docs/study',
           label: '学业',
           position: 'left',
-          activeBaseRegex: 'docs/study/(next|v8)',
         },
         {
-          to: '/docs/study',
+          to: '/docs/graduate',
           label: '毕业',
           position: 'left',
-          activeBaseRegex: 'docs/study/(next|v8)',
         },
 
         // 右
@@ -126,7 +116,7 @@ const config: Config = {
           to: '/docs/about',
           label: '关于我们',
           position: 'right',
-          activeBaseRegex: 'docs/study/(next|v8)',
+          activeBasePath: `/docs/about`
         },
         {
           type: 'search',
@@ -146,48 +136,7 @@ const config: Config = {
     },
     footer: {
       style: 'dark',
-      links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} <a href="/docs/about">桃子湖工作站</a>.`,
     },
     prism: {
       theme: prismThemes.github,
