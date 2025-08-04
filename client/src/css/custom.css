@@ -28,3 +28,33 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* 自定义字体 */
+/* 定义 Regular 字重 */
+@font-face {
+  font-family: "Maple Mono";
+  src: url("https://cdn.jsdelivr.net/gh/subframe7536/Maple-font@master/fonts/MapleMono-Regular.woff2") format("woff2");
+  font-weight: 400; /* Regular */
+  font-style: normal;
+  font-display: swap; /* 优化加载体验 */
+}
+
+/* 定义 Bold 字重 */
+@font-face {
+  font-family: "Maple Mono";
+  src: url("https://cdn.jsdelivr.net/gh/subframe7536/Maple-font@master/fonts/MapleMono-Bold.woff2") format("woff2");
+  font-weight: 700; /* Bold */
+  font-style: normal;
+  font-display: swap;
+}
+
+.maple {
+  font-family: "Maple Mono", monospace;
+}
+
+.maple-bold {
+  font-family: "Maple Mono", monospace;
+  font-weight: 700;
+}
+
+/* 自定义颜色 */
