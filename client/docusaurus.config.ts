@@ -2,6 +2,9 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
@@ -42,26 +45,14 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           // editUrl:
           //  'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          // editUrl:
-          //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -79,10 +70,21 @@ const config: Config = {
     },
   ],
 
+  stylesheets: [
+    {
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
+      type: 'text/css',
+      integrity:
+        'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
+      crossorigin: 'anonymous',
+    },
+  ],
+
   themeConfig: {
     // Replace with your project's social card
     image: 'img/logo.png',
     navbar: {
+      hideOnScroll: true,
       title: '学生手册',
       logo: {
         alt: '机器人学院学生手册Logo',
@@ -91,32 +93,36 @@ const config: Config = {
       items: [
         // 左
         {
-          to: '/docs/start',
+          type: 'docSidebar',
+          sidebarId: 'start',
           label: '入学',
           position: 'left',
         },
         {
-          to: '/docs/life',
+          type: 'docSidebar',
+          sidebarId: 'life',
           label: '生活',
           position: 'left',
         },
         {
-          to: '/docs/study',
+          type: 'docSidebar',
+          sidebarId: 'study',
           label: '学业',
           position: 'left',
         },
         {
-          to: '/docs/graduate',
+          type: 'docSidebar',
+          sidebarId: 'graduate',
           label: '毕业',
           position: 'left',
         },
 
         // 右
         {
-          to: '/docs/about',
+          to: '/about',
           label: '关于我们',
           position: 'right',
-          activeBasePath: `/docs/about`
+          activeBasePath: `/about`
         },
         {
           type: 'search',
@@ -137,6 +143,12 @@ const config: Config = {
     footer: {
       style: 'dark',
       copyright: `Copyright © ${new Date().getFullYear()} <a href="/docs/about">桃子湖工作站</a>.`,
+    },
+    docs: {
+      sidebar: {
+        hideable: true,
+        autoCollapseCategories: true,
+      },
     },
     prism: {
       theme: prismThemes.github,
