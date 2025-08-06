@@ -1,7 +1,6 @@
 import type {ReactNode} from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 
 function HomepageHeader() {
@@ -22,15 +21,11 @@ function HomepageHeader() {
 }
 
 export default function Home(): ReactNode {
-  const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
       title="首页 | 机器人学院学生手册"
       description="一站式的学生信息获取站点">
       <HomepageHeader/>
-      {/*<main>*/}
-      {/*  <HomepageFeatures/>*/}
-      {/*</main>*/}
     </Layout>
   );
 }
