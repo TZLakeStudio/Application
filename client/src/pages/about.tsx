@@ -2,7 +2,7 @@ import type {ReactNode} from 'react';
 import Layout from '@theme/Layout';
 
 
-function AboutpageHeader() {
+function AboutpageHeader(): ReactNode {
   return (
     <div className="shadow--lw" style={{ height: '25rem' }}>
       <div>
@@ -16,7 +16,7 @@ function AboutpageHeader() {
   );
 }
 
-function AboutpageMidder() {
+function AboutpageMidder(): ReactNode {
   return (
     <div className="container">
       本项目由机器人学院<a className="button button--link" href="https://github.com/TZLakeStudio">桃子湖工作站</a>维护
