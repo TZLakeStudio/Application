@@ -17,11 +17,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup PNPM
         uses: pnpm/action-setup@v2
         with:
           version: 8
+          run_install: false
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -30,8 +33,15 @@ jobs:
           cache: 'pnpm'
           cache-dependency-path: 'client/pnpm-lock.yaml'
 
+      - name: Verify lockfile
+        run: |
+          echo "Lockfile content:"
+          head -n 10 pnpm-lock.yaml
+          echo "PNPM version:"
+          pnpm --version
+
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --no-frozen-lockfile
 
       - name: Build Docusaurus
         run: pnpm run build
