@@ -142,7 +142,7 @@ const config: Config = {
     },
     footer: {
       style: 'dark',
-      copyright: `Copyright © ${new Date().getFullYear()} <a href="/about">桃子湖工作站</a>.`,
+      copyright: `Copyright © ${new Date().getFullYear()} <a href="./about">桃子湖工作站</a>.`,
     },
     docs: {
       sidebar: {

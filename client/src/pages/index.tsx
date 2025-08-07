@@ -12,9 +12,9 @@ function HomepageHeader(): ReactNode {
         <h1 className="hero__title text--primary">机器人学院 <span className="text--success maple">学生手册</span></h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div>
-          <a className="button button--primary button--lg" href="/docs/start">开始阅读</a>
+          <a className="button button--primary button--lg" href="./docs/start">开始阅读</a>
           <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-          <a className="button button--secondary button--lg" href="/about">加入我们</a>
+          <a className="button button--secondary button--lg" href="./about">加入我们</a>
         </div>
       </div>
     </div>
