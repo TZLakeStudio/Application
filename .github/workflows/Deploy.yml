@@ -50,5 +50,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build  # 注意这里去掉了client/前缀
+          publish_dir: ./client/build  # 注意这里去掉了client/前缀
           keep_files: false
