@@ -5,6 +5,7 @@ on:
     branches: [react]
     paths:
       - 'client/**'
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
