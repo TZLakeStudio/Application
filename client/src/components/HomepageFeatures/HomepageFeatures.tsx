@@ -9,22 +9,22 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: "入学",
-    description: "新生入学必读! 暑假必做准备和开学须知.",
+    description: "入学描述文本.",
     url: "./docs/start",
   },
   {
     title: "生活",
-    description: "湖大生活指南.",
+    description: "生活描述文本.",
     url: "./docs/life",
   },
   {
     title: "学业",
-    description: "学业指南.",
+    description: "学业描述文本.",
     url: "./docs/study",
   },
   {
     title: "毕业",
-    description: "毕业去向.",
+    description: "毕业描述文本.",
     url: "./docs/graduate",
   },
 ];
@@ -51,7 +51,7 @@ function Feature({title, description, url}: FeatureItem): ReactNode {
 
 export default function HomepageFeatures(): ReactNode {
   return (
-    <div className="container">
+    <div className="container margin-vert--lg">
       <div className="row">
         { FeatureList.map((props, idx) => (
           <Feature key={ idx } { ...props } />
