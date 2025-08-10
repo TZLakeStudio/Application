@@ -10,13 +10,9 @@
 
 ## 构建
 
-使用`pnpm`包管理器, `vue`构建器和`vite`打包器.
-
 ```bash
+$ cd client
 $ pnpm install
-$ pnpm run dev
+$ pnpm run start
 ```
-
-## Contact联系:
-xxxx@hnu.edu.cn
 
