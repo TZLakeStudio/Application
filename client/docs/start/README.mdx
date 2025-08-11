@@ -2,11 +2,46 @@
 sidebar_position: 0
 ---
 
-# 入学
+# 入学指南
+
+export const GetingStart = () => {
+	const targetDate = new Date("2025-09-09");
+	const today = new Date();
+	const timeDiff = targetDate - today;
+	const daysDiff = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+	return (
+		<span className="badge badge--success">{daysDiff}</span>
+	);
+}
+
+25级的新同学们你们好啊~ 开学倒计时 <GetingStart/> 天! 你准备好了吗!
 
 
-export const NewYear = () => (
-  <span>{new Date().getFullYear() % 100}</span>
-);
+<div className="card shadow--md">
+	<div className="card__header">
+		<h1 className="text--center">敢为人先&nbsp;&nbsp;实事求是</h1>
+	</div>
+	<p className="text--right margin-right--lg">---- 湖南大学校训</p>
+</div>
 
-<NewYear/> 级的新同学们你们好啊~
+<br/>
+
+<div className="card shadow--md">
+	<div className="card__header">
+		<h2>亲爱的新同学:</h2>
+	</div>
+	<div className="card__body">
+		<p>
+			你好! 祝贺你以优异的成绩考入湖南大学人工智能与机器人学院, 欢迎你成为湖南大学人工智能与机器人学院的一员!
+		</p>
+		<p>
+			为了你能安全到校, 顺利的完成报到手续, 现将入学注意事项通知如下, 请仔细阅读并完成填表内容.
+		</p>
+	</div>
+</div>
+
+___
+
+本入学指南由 [桃子湖工作站](../../about) 组织编写, 在学校官方的 [入学指南](/docs/start/入学指南2025.pdf) 基础上, 结合本院信息, 分类整理得到本指南.
+
+请本院新同学认真阅读, 祝你们平安到达, 入学顺利!
