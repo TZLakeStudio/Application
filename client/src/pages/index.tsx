@@ -9,7 +9,7 @@ function HomepageHeader(): ReactNode {
   return (
     <div className="hero shadow--lw" style={{ height: '25rem' }}>
       <div className="container">
-        <h1 className="hero__title text--primary">机器人学院 <span className="text--success maple">学生手册</span></h1>
+        <h1 className="hero__title text--primary">人工智能与机器人学院 <span className="text--success maple">学生手册</span></h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div>
           <a className="button button--primary button--lg" href="./docs/start">开始阅读</a>
