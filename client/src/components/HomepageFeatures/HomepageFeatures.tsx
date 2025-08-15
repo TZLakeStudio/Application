@@ -3,14 +3,14 @@ import styles from './styles.module.css'
 
 type FeatureItem = {
   title: string;
-  description: string;
+  description: ReactNode;
   url: string;
 }
 
 const FeatureList: FeatureItem[] = [
   {
     title: "入学",
-    description: "新生报到全攻略: <br/>从录取到入住一站式指南! <br/>助你顺利开启湖大生活！",
+    description: <span>新生报到全攻略: <br/>从录取到入住一站式指南! <br/>助你顺利开启湖大生活！</span>,
     url: "./docs/start",
   },
   {
@@ -32,8 +32,22 @@ const FeatureList: FeatureItem[] = [
     title: "跃鹿战队",
     description: "加入湖南大学跃鹿战队, 征战全国大学生机器人大赛, 成就优秀青年工程师",
     url: "./docs/study/跃鹿战队"
+  },
+  {
+    title: "六级成绩查询倒计时",
+    description: <Band6Time/>,
+    url: "."
   }
 ];
+
+function Band6Time() {
+  const target = new Date('2025-08-16T06:00:00').getTime();
+  const now = Date.now();
+  const diff = Math.max(0, target - now);
+  const hours = Math.floor(diff / (1000 * 60 * 60));
+  const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  return <span className="badge badge--success">{hours}h {minutes}min</span>;
+}
 
 function Feature({title, description, url}: FeatureItem): ReactNode {
   return (
@@ -43,10 +57,7 @@ function Feature({title, description, url}: FeatureItem): ReactNode {
           <h3 className="text--center">{title}</h3>
         </div>
         <div className="card__body">
-          <p
-            className="text--center"
-            dangerouslySetInnerHTML={{ __html: description }}
-          />
+          <p className="text--center">{description}</p>
         </div>
         <div className="card__footer">
           <a className={`button button--primary button--block ${styles.button}`} href={url}>
