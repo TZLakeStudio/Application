@@ -9,7 +9,7 @@ function AboutpageHeader(): ReactNode {
         <br/><br/><br/><br/>
       </div>
       <div className="container">
-        <h1 className="hero__title text--primary text--center">机器人学院</h1>
+        <h1 className="hero__title text--primary text--center">人工智能与机器人学院</h1>
         <h1 className="hero__title text--success maple text--center">桃子湖工作站</h1>
       </div>
     </div>
