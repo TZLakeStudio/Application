@@ -10,7 +10,7 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: "入学",
-    description: <span>新生报到全攻略: <br/>从录取到入住一站式指南! <br/>助你顺利开启湖大生活！</span>,
+    description:  <span>新生报到全攻略: <br/>从录取到入住一站式指南! <br/>助你顺利开启湖大生活！</span>,
     url: "./docs/start",
   },
   {
@@ -20,7 +20,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: "学业",
-    description: "学业描述文本.",
+    description: <span>学业有困惑？<br/>一键get√官方咨询和学长学姐珍藏经验！</span>,
     url: "./docs/study",
   },
   {
