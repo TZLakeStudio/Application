@@ -30,12 +30,17 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: "跃鹿战队",
-    description: "加入湖南大学跃鹿战队, 征战全国大学生机器人大赛, 成就优秀青年工程师",
+    description: <>加入湖南大学跃鹿战队, 征战全国大学生机器人大赛, 成就优秀青年工程师</>,
     url: "./docs/study/跃鹿战队"
   },
   {
     title: "六级成绩查询倒计时",
     description: <Band6Time/>,
+    url: "https://cjcx.neea.edu.cn/html1/folder/21083/9970-1.htm"
+  },
+  {
+    title: "开学倒计时",
+    description: <>24级: <CountDown target={"2025-09-22"}/><br/>25级: <CountDown target={"2025-09-09"}/></>,
     url: "."
   }
 ];
@@ -47,6 +52,15 @@ function Band6Time() {
   const hours = Math.floor(diff / (1000 * 60 * 60));
   const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
   return <span className="badge badge--success">{hours}h {minutes}min</span>;
+}
+
+function CountDown(props: { target: string }): ReactNode {
+  const target = new Date(props.target).getTime();
+  const now = Date.now();
+  const diff = Math.max(0, target - now);
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  return <span className="badge badge--success">{days}d {hours}h</span>;
 }
 
 function Feature({title, description, url}: FeatureItem): ReactNode {
