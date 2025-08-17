@@ -1,0 +1,56 @@
+# 新生必做
+
+___
+
+这一章是你**入学闯关第一关**:
+
+:::info 目标
+
+让校园生活从`手忙脚乱`变`轻松拿捏`
+
+:::
+
+export function Task() {
+  	const taskList = [
+		{
+		  title: "预报到",
+		  description: "拿到入学通行证",
+		},
+		{
+		  title: "缴费",
+		  description: "开通校园生活权限",
+		},
+		{
+		  title: "校园卡",
+		  description: "解锁食堂, 图书馆, 网络",
+		},
+		{
+		  title: "国防教育 + 安全学习",
+		  description: "完成开学必修课",
+		},
+		{
+		  title: "图书馆闯关",
+		  description: "点亮校园探索技能",
+		},
+	];
+
+	return (
+		<ul>
+			{taskList.map((item, index) => (
+				<li key={index} className="row">
+					<span className="button button--primary col col--4 text--center">{item.title}</span>
+					<span className="button button--link text--center"><i className="fa-solid fa-arrow-right"></i></span>
+					<span className="button button--success col col--4 text--center">{item.description}</span>
+				</li>
+			))}
+		</ul>
+	);
+}
+
+:::danger 任务
+
+<Task />
+
+:::
+
+点击**下一页**, 开启第一关!

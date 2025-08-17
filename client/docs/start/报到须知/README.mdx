@@ -1,0 +1,56 @@
+# 报道须知
+
+___
+
+这一章是你**入学闯关第二关**:
+
+:::info 目标
+
+丝滑报到~
+
+:::
+
+export function Task() {
+  	const taskList = [
+		{
+		  title: "新生报到",
+		  description: "正式进入校园",
+		},
+		{
+		  title: "关系转接",
+		  description: "学籍与团关系的转接",
+		},
+		{
+		  title: "其他须知",
+		  description: "这些须知也不容忽视",
+		},
+		{
+		  title: "官方微信公众号",
+		  description: "打破大学信息差",
+		},
+		{
+		  title: "医疗保健与治安",
+		  description: "让校园生活便利安全",
+		},
+	];
+
+	return (
+		<ul>
+			{taskList.map((item, index) => (
+				<li key={index} className="row">
+					<span className="button button--primary col col--4 text--center">{item.title}</span>
+					<span className="button button--link text--center"><i className="fa-solid fa-arrow-right"></i></span>
+					<span className="button button--success col col--4 text--center">{item.description}</span>
+				</li>
+			))}
+		</ul>
+	);
+}
+
+:::danger 任务
+
+<Task />
+
+:::
+
+点击**下一页**, 开启第二关!

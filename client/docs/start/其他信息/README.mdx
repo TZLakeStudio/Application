@@ -1,0 +1,56 @@
+# 其他信息
+
+___
+
+这一章是你**入学闯关第一关**:
+
+:::info 目标
+
+从`顺利入学`到`搞定收尾`
+
+:::
+
+export function Task() {
+  	const taskList = [
+		{
+		  title: "户口迁移",
+		  description: "搞定户籍无忧转换",
+		},
+		{
+		  title: "校园资讯",
+		  description: "掌握最新校园动态",
+		},
+		{
+		  title: "资助政策",
+		  description: "解锁学业经济支持",
+		},
+		{
+		  title: "国际交流机会",
+		  description: "开启全球视野",
+		},
+		{
+		  title: "大学生入伍",
+		  description: "探索军旅成长路径",
+		},
+	];
+
+	return (
+		<ul>
+			{taskList.map((item, index) => (
+				<li key={index} className="row">
+					<span className="button button--primary col col--4 text--center">{item.title}</span>
+					<span className="button button--link text--center"><i className="fa-solid fa-arrow-right"></i></span>
+					<span className="button button--success col col--4 text--center">{item.description}</span>
+				</li>
+			))}
+		</ul>
+	);
+}
+
+:::danger 任务
+
+<Task />
+
+:::
+
+点击**下一页**, 开启最后一程!
