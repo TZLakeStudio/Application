@@ -28,11 +28,11 @@ category:
 
 职徒简历高校模板简历创步骤：
 
-![Fig.1](/docs/graduate/保研/20级/郭宇欣/wps1.jpg)
+![Fig.1](/docs/graduate/baoyan/20/GYX/wps1.jpg)
 
-![Fig.2](/docs/graduate/保研/20级/郭宇欣/wps2.jpg)
+![Fig.2](/docs/graduate/baoyan/20/GYX/wps2.jpg)
 
-![Fig.3](/docs/graduate/保研/20级/郭宇欣/wps3.jpg)
+![Fig.3](/docs/graduate/baoyan/20/GYX/wps3.jpg)
 
 ### 2.2联系老师的邮件
 
@@ -52,9 +52,9 @@ category:
 
 下面的图片是我投递夏令营时的材料封面与目录，可供各位同学参考。
 
-![Fig.4](/docs/graduate/保研/20级/郭宇欣/wps4.jpg)
+![Fig.4](/docs/graduate/baoyan/20/GYX/wps4.jpg)
 
-![Fig.5](/docs/graduate/保研/20级/郭宇欣/wps5.jpg)
+![Fig.5](/docs/graduate/baoyan/20/GYX/wps5.jpg)
 
 ## 3. 夏令营预推免经验介绍分享
 
