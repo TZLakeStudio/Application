@@ -3,45 +3,43 @@ import styles from './styles.module.css'
 
 type FeatureItem = {
   title: string | ReactNode;
-  description: ReactNode;
-  url: string;
+  description: string | ReactNode;
+  url?: string;
 }
 
 const FeatureList: FeatureItem[] = [
   {
     title: "入学",
     description: <span>新生报到全攻略: <br/>从录取到入住一站式指南! <br/>助你顺利开启湖大生活！</span>,
-    url: "./docs/start",
+    url: "/docs/start",
   },
   {
     title: "生活",
-    description: "生活描述文本.",
-    url: "./docs/life",
+    description: <>学业有困惑?<br/>一键get官方咨询和学长学姐珍藏经验！</>,
+    url: "/docs/life",
   },
   {
     title: "学业",
     description: "学业描述文本.",
-    url: "./docs/study",
+    url: "/docs/study",
   },
   {
     title: "毕业",
     description: "毕业描述文本.",
-    url: "./docs/graduate",
+    url: "/docs/graduate",
   },
   {
     title: "跃鹿战队",
-    description: <>加入湖南大学跃鹿战队, 征战全国大学生机器人大赛, 成就优秀青年工程师</>,
-    url: "./docs/study/跃鹿战队"
+    description: "加入湖南大学跃鹿战队, 征战全国大学生机器人大赛, 成就优秀青年工程师",
+    url: "/docs/study/跃鹿战队"
   },
   {
     title: <DigitalClock/>,
-    description: <AnalogClock/>,
-    url: "."
+    description: <AnalogClock/>
   },
   {
     title: "开学倒计时",
     description: <>24级: <CountDown target={"2025-09-22"}/><br/>25级: <CountDown target={"2025-09-09"}/></>,
-    url: "."
   },
 ];
 
@@ -152,15 +150,17 @@ function Feature({title, description, url}: FeatureItem): ReactNode {
         <div className="card__body">
           <p className="text--center">{description}</p>
         </div>
-        <div className="card__footer">
-          <a className={`button button--primary button--block ${styles.button}`} href={url}>
-            <span className={`text--secondary ${styles.buttonContent}`}>
-              <i className={`fa-solid fa-arrow-right ${styles.icon}`}></i>
-              <span className={styles.text}>点击跳转</span>
-            </span>
-            <span className={`text--secondary ${styles.url}`}>{url.replace('./docs/', '')}</span>
-          </a>
-        </div>
+        { url && (
+          <div className="card__footer">
+            <a className={`button button--primary button--block ${styles.button}`} href={url}>
+              <span className={`text--secondary ${styles.buttonContent}`}>
+                <i className={`fa-solid fa-arrow-right ${styles.icon}`}></i>
+                <span className={styles.text}>点击跳转</span>
+              </span>
+              <span className={`text--secondary ${styles.url}`}>{url}</span>
+            </a>
+          </div>
+        )}
       </div>
     </div>
   );
