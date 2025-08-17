@@ -30,7 +30,7 @@ export function Task() {
 		},
 		{
 		  title: "医疗保健与治安",
-		  description: "让校园生活便利安全",
+		  description: "让校园生活更安全",
 		},
 	];
 
@@ -38,9 +38,9 @@ export function Task() {
 		<ul>
 			{taskList.map((item, index) => (
 				<li key={index} className="row">
-					<span className="button button--primary col col--4 text--center">{item.title}</span>
-					<span className="button button--link text--center"><i className="fa-solid fa-arrow-right"></i></span>
-					<span className="button button--success col col--4 text--center">{item.description}</span>
+					<span className="badge badge--primary">{item.title}</span>
+					<span className="badge"><i className="fa-solid fa-arrow-right text--primary"></i></span>
+					<span className="badge badge--success">{item.description}</span>
 				</li>
 			))}
 		</ul>
