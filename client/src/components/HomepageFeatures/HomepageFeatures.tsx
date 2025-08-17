@@ -31,7 +31,7 @@ const FeatureList: FeatureItem[] = [
   {
     title: "跃鹿战队",
     description: "加入湖南大学跃鹿战队, 征战全国大学生机器人大赛, 成就优秀青年工程师",
-    url: "/docs/study/跃鹿战队"
+    url: "/docs/study/RM"
   },
   {
     title: <DigitalClock/>,
