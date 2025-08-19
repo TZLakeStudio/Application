@@ -1,5 +1,6 @@
 import {ReactNode} from "react";
 import Timeline from "@site/src/components/AboutpageFeatures/Timeline";
+import Credit from "@site/src/components/AboutpageFeatures/Credit";
 
 
 type FeatureItem = {
@@ -35,7 +36,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: "特别鸣谢",
-    description: ""
+    description: <Credit/>
   },
   {
     title: "加入我们",

@@ -1,4 +1,7 @@
-import {ReactNode, useState, useEffect} from "react";
+import {ReactNode} from "react";
+import AnalogClock from "@site/src/components/HomepageFeatures/AnalogClock"
+import DigitalClock from "@site/src/components/HomepageFeatures/DigitalClock";
+import CountDown from "@site/src/components/HomepageFeatures/CountDown";
 import styles from './styles.module.css'
 
 
@@ -44,103 +47,6 @@ const FeatureList: FeatureItem[] = [
     description: <>24级: <CountDown target={"2025-09-22"}/><br/>25级: <CountDown target={"2025-09-09"}/></>,
   },
 ];
-
-
-function AnalogClock(): ReactNode {
-  const [now, setNow] = useState(new Date());
-
-  useEffect(() => {
-    const timer = setInterval(() => setNow(new Date()), 1000);
-    return () => clearInterval(timer);
-  }, []);
-
-  const sec = now.getSeconds();
-  const min = now.getMinutes();
-  const hour = now.getHours();
-
-  const secAngle = sec * 6;
-  const minAngle = min * 6 + sec * 0.1;
-  const hourAngle = ((hour % 12) * 30) + (min * 0.5);
-
-  return (
-    <svg width="120" height="120" viewBox="0 0 120 120">
-      <circle cx="60" cy="60" r="56" fill="#fff" stroke="#333" strokeWidth="4"/>
-      <line
-        x1="60" y1="60"
-        x2="60" y2="32"
-        stroke="#333"
-        strokeWidth="6"
-        strokeLinecap="round"
-        transform={`rotate(${hourAngle} 60 60)`}
-      />
-      <line
-        x1="60" y1="60"
-        x2="60" y2="20"
-        stroke="#666"
-        strokeWidth="4"
-        strokeLinecap="round"
-        transform={`rotate(${minAngle} 60 60)`}
-      />
-      <line
-        x1="60" y1="60"
-        x2="60" y2="12"
-        stroke="#e33"
-        strokeWidth="2"
-        strokeLinecap="round"
-        transform={`rotate(${secAngle} 60 60)`}
-      />
-      <circle cx="60" cy="60" r="4" fill="#333"/>
-    </svg>
-  );
-}
-
-
-function DigitalClock(): ReactNode {
-  const [now, setNow] = useState(new Date());
-
-  useEffect(() => {
-    const timer = setInterval(() => setNow(new Date()), 1000);
-    return () => clearInterval(timer);
-  }, []);
-
-  return (
-    <span className="badge badge--info">
-      {now.toLocaleTimeString()}
-    </span>
-  );
-}
-
-
-function CountDown(props: { target: string }): ReactNode {
-  const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 0
-  });
-
-  useEffect(() => {
-    const target = new Date(props.target).getTime();
-
-    const updateCountdown = () => {
-      const now = Date.now();
-      const diff = Math.max(0, target - now);
-
-      setTimeLeft({
-        days: Math.floor(diff / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
-      });
-    };
-
-    updateCountdown();
-    const intervalId = setInterval(updateCountdown, 1000);
-    return () => clearInterval(intervalId);
-  }, [props.target]);
-
-  return (
-    <span className="badge badge--success">
-      {timeLeft.days}d {timeLeft.hours}h
-    </span>
-  );
-}
 
 
 function Feature({title, description, url}: FeatureItem): ReactNode {
