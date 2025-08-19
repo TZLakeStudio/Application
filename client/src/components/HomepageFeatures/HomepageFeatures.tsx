@@ -15,22 +15,22 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: "入学",
-    description: <span>新生报到全攻略: <br/>从录取到入住一站式指南! <br/>助你顺利开启湖大生活！</span>,
+    description: <>新生报到全攻略: <br/>从录取到入住一站式指南! <br/>助你顺利开启湖大生活！</>,
     url: "/docs/start",
   },
   {
     title: "生活",
-    description: <span>快乐生活每一天！<br/>囊括了娱乐饮食出行等各方面的生活密码！</span>,
+    description: <>快乐生活每一天!<br/>囊括了娱乐饮食出行等各方面的生活密码!</>,
     url: "/docs/life",
   },
   {
     title: "学业",
-    description: <span>学业有困惑?<br/>一键get官方咨询和学长学姐珍藏经验！</span>,
+    description: <>学业有困惑?<br/>一键get官方咨询和学长学姐珍藏经验!</>,
     url: "/docs/study",
   },
   {
     title: "毕业",
-    description:  <span>生涯规划有困难？ <br/>优秀毕业生分享从保研、留学、工作全经验！</span>,
+    description:  <>生涯规划有困难?<br/>优秀毕业生分享从保研, 留学, 工作全经验!</>,
     url: "/docs/graduate",
   },
   {
