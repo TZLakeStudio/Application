@@ -23,6 +23,7 @@ function HomepageHeader(): ReactNode {
   );
 }
 
+
 export default function Home(): ReactNode {
   return (
     <Layout
