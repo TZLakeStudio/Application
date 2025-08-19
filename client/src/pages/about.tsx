@@ -1,4 +1,5 @@
 import type {ReactNode} from 'react';
+import AboutpageFeatures from "@site/src/components/AboutpageFeatures/AboutpageFeatures";
 import Layout from '@theme/Layout';
 
 
@@ -16,19 +17,12 @@ function AboutpageHeader(): ReactNode {
   );
 }
 
-function AboutpageMidder(): ReactNode {
-  return (
-    <div className="container">
-      本项目由机器人学院<a className="button button--link" href="https://github.com/TZLakeStudio">桃子湖工作站</a>维护
-    </div>
-  );
-}
 
 export default function About(): ReactNode {
   return (
     <Layout>
       <AboutpageHeader/>
-      <AboutpageMidder/>
+      <AboutpageFeatures/>
     </Layout>
   );
 }

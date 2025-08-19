@@ -1,11 +1,13 @@
 import {ReactNode, useState, useEffect} from "react";
 import styles from './styles.module.css'
 
+
 type FeatureItem = {
   title: string | ReactNode;
   description: string | ReactNode;
   url?: string;
 }
+
 
 const FeatureList: FeatureItem[] = [
   {
@@ -92,6 +94,7 @@ function AnalogClock(): ReactNode {
   );
 }
 
+
 function DigitalClock(): ReactNode {
   const [now, setNow] = useState(new Date());
 
@@ -166,12 +169,13 @@ function Feature({title, description, url}: FeatureItem): ReactNode {
   );
 }
 
+
 export default function HomepageFeatures(): ReactNode {
   return (
     <div className="container margin-bottom--lg">
       <div className="row">
-        { FeatureList.map((props, idx) => (
-          <Feature key={ idx } { ...props } />
+        { FeatureList.map((props, index) => (
+          <Feature key={index} {...props} />
         )) }
       </div>
     </div>
