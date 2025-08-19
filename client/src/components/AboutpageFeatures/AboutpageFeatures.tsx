@@ -79,7 +79,7 @@ const FeatureList: FeatureItem[] = [
     description: (
       <>
         <p>
-          <span className="badge badge--primary maple">桃子湖工作组</span> 是湖南大学人工与机器人学院学生自己成立的一个IT组织,
+          <span className="badge badge--primary maple">桃子湖工作站</span> 是湖南大学人工与机器人学院学生自己成立的一个IT组织,
           尚未转正.
           目前主要任务是进行本<span className="badge badge--primary">学生手册</span>网站的开发和运维工作.
         </p>
