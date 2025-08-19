@@ -15,7 +15,7 @@ const FeatureList: FeatureItem[] = [
     description: (
       <>
         <p>
-          本<span className="badge badge--primary">学生手册</span>项目由24级学长<a href="https://github.com/roundly">Roundly</a>发起,
+          本<span className="badge badge--primary">学生手册</span>项目由21级学长<a href="https://github.com/roundly">Roundly</a>发起,
           并由<a href="https://github.com/TZLakeStudio">桃子湖工作站</a>负责维护,
           旨在打造一个"一站式的学生信息获取平台", 以便人工智能与机器人学院本科生高效获取各类资料, 提前做好学业与发展规划。
         </p>
