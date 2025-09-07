@@ -4,9 +4,26 @@ sidebar_position: 0
 
 # 生活指南
 
+___
 
-export const NewYear = () => (
-  <span>{new Date().getFullYear() % 100}</span>
-);
+本栏目是一部包含`衣食住行`, `吃喝玩乐`等各项目的校园生活指南, 由`学生投稿`, `公众号文章转载`等方式收集文章, 并由<span class="badge badge--success">桃子湖工作站</span>审核发布.
 
-<NewYear/> 级的新同学们你们好啊~
+如果你有想要分享的见解, 喜欢的小店, 不为人知的好去处, 欢迎通过以下方式投稿.
+
+同样的, 如果你有想要吐槽的地方, 想分享出来让大家一起避雷, 也可以在这里吐露真言.
+
+export function Verify() {
+	const length = 6;
+	const bytes = new Uint8Array(Math.ceil(length * 3 / 4));
+	window.crypto.getRandomValues(bytes);
+	const msg = btoa(String.fromCharCode(...bytes)).slice(0, length);
+	return <>{ msg }</>
+}
+
+- 工作站QQ群: 1055903804 (验证码: <span class="badge badge--primary"><Verify /></span>)
+- 站长邮箱: [twisuki@outlook.com](mailto://twisuki@outlook.com)
+- Github Issues: [TZLakeStudio/Application](https://github.com/TZLakeStudio/Application/issues/16)
+
+不要担心自己文章写的不好, 没有能力胜任工作. 我们这里本来就是个畅所欲言的地方, 本来就是个人人参与人人受益的地方.
+
+只要你有信息想要提供, 我们都欢迎, 而且<span class="badge badge--success">桃子湖工作站</span>会负责整理和发布. 你只需要提供新点子!
