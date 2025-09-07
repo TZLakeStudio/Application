@@ -14,9 +14,9 @@ ___
 
 export function Verify() {
 	const length = 6;
-	const bytes = new Uint8Array(Math.ceil(length * 3 / 4));
-	window.crypto.getRandomValues(bytes);
-	const msg = btoa(String.fromCharCode(...bytes)).slice(0, length);
+	const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-=!@#$%^&*()_+";
+	let msg = "";
+	for (let i = 0; i < length; i ++) msg += chars.charAt(Math.floor(Math.random() * chars.length));
 	return <>{ msg }</>
 }
 
