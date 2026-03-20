@@ -42,10 +42,6 @@ const FeatureList: FeatureItem[] = [
     title: <DigitalClock/>,
     description: <AnalogClock/>
   },
-  {
-    title: "开学倒计时",
-    description: <>24级: <CountDown target={"2025-09-22"}/><br/>25级: <CountDown target={"2025-09-09"}/></>,
-  },
 ];
 
 
